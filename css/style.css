@@ -110,8 +110,10 @@ body {
     
     #header {
         height: 72px;
+        position: sticky;
+        top: 0;
     }
-    
+        
     .mobile-view {
         display: block;
     }
