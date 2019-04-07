@@ -14,6 +14,7 @@ body {
 #header {
     background-color: #F9F9F9;
     height: 82px;
+    position: relative;
 }
 
 .site-width {
@@ -21,22 +22,28 @@ body {
 }
 
 .padding-lr {
-    padding: 0 15px 0 15px;
+    padding: 0 16px;
 }
 
-.left-align {
-    float: left;    
+.left-side {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
 }
 
-.right-align {
-    float: right;
+.right-side {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
 }
 
-.display-on-mobile {
+.mobile-view {
     display: none;
 }
 
-.display-on-desktop {
+.desktop-view {
     display: block;
 }
 
@@ -44,17 +51,39 @@ body {
     display: inline-block;
     width: 30px;
     height: 30px;    
-    border: 1px solid black;
+    background-size: contain;    
+}
+
+#header div .icon {
+    margin-right: 12px;
+}
+    
+#header div .icon:last-child {
+    margin-right: 0;   
 }
 
 .icon-close {    
-    background: url('../icons/Cross-Large.svg') no-repeat left;
-    background-size: contain;    
+    background: url('../icons/Cross-Large.svg') no-repeat left;    
 }
 
 .icon-back {
     background: url('../icons/Chevron-Left-Large.svg') no-repeat left;
-    background-size: contain;
+}
+
+.icon-list {    
+    background: url('../icons/To-Do-List.svg') no-repeat left;
+}
+
+.icon-work {
+    background: url('../icons/Work.svg') no-repeat left;
+}
+
+.icon-tick {    
+    background: url('../icons/Clear.svg') no-repeat left;
+}
+
+.icon-dots {
+    background: url('../icons/Triple-Dot.svg') no-repeat left;
 }
 
 
@@ -83,13 +112,23 @@ body {
         height: 72px;
     }
     
-    .display-on-mobile {
+    .mobile-view {
         display: block;
     }
 
-    .display-on-desktop {
+    .desktop-view {
         display: none;
     }
 
+    .padding-lr {
+        padding: 0 8px;
+    }
     
+    .left-side {
+        left: 8px;
+    }
+    
+    .right-side {
+        right: 8px;
+    }
 }
