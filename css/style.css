@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+    color: #444444;
 }
 
 #container {
@@ -15,13 +16,14 @@ body {
     background-color: #F9F9F9;
     height: 82px;
     position: relative;
+    margin-bottom: 16px;
 }
 
 .site-width {
     max-width: 980px;
 }
 
-.padding-lr {
+.gutter-lr {
     padding: 0 16px;
 }
 
@@ -86,7 +88,205 @@ body {
     background: url('../icons/Triple-Dot.svg') no-repeat left;
 }
 
+.action-items {
+    border-left: 4px solid #ea9e09;
+    padding-left: 2px;
+    margin-bottom: 24px;
+}
 
+.icon-thin {
+    display: block;
+    /*width: 18px;*/
+    /* height: 18px; */
+    line-height: 18px;
+    background-size: contain;
+    padding-left: 34px;
+}
+
+.action-items .icon-thin a {
+    color: #2f2e2e;
+    text-decoration: underline;
+}
+
+.action-items .icon-thin a:hover {
+    text-decoration: none;
+}
+
+.icon-thin-work {
+    background: url('../icons/Work-Thin.svg') no-repeat left;    
+}
+
+.icon-thin-contact-organisation {
+    background: url('../icons/Contact-Organization-Thin.svg') no-repeat left;
+}
+
+.icon-form {
+    background: url('../icons/File-PDF.svg') no-repeat left 6px top 50%;
+    /* height: 20px;
+    line-height: 20px; */
+    border: 1px solid #eee0ce;
+    background-color: white;
+    border-radius: 20px;    
+    color: #444;
+    padding: 8px 12px 8px 40px;
+    display: inline-block;
+}
+
+.icon-comment {
+    background: url('../icons/File-PDF.svg') no-repeat left 6px top 50%;
+    background-color: #F2F2F2;
+    border-radius: 20px;    
+    color: #2872d3;
+    padding: 16px 16px 16px 40px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.icon-inline {
+    
+}
+
+.icon-inline div {
+    display: inline-block;
+    padding: 8px 12px 8px 30px;
+}
+
+.icon-inline-work {
+    background: url('../icons/Work-Thin.svg') no-repeat left 6px top 50%;
+}
+
+.icon-inline-list {
+    background: url('../icons/To-Do-List-Thin.svg') no-repeat left 6px top 50%;
+}
+
+.icon-inline-flag {
+    background: url('../icons/Flag-Thin.svg') no-repeat left 6px top 50%;
+}
+
+#message-body {
+    
+}
+
+.message {
+    margin-bottom: 4px;
+    padding: 10px;
+    border-radius: 16px;
+    /* display: inline-block; */
+}
+
+.message div {
+    
+}
+
+.message a {
+    color: #2872d3;    
+    text-decoration: underline;
+}
+
+.message a:hover {
+    text-decoration: none;   
+}
+
+.message a.link-person {
+    text-decoration: none;
+    background-color: #bfd7f5;
+}
+
+.message a.link-person:hover {
+    text-decoration: underline;
+}
+
+#message-body .message-container:nth-child(2n) .message {
+    background-color: #ebebeb;
+}
+
+#message-body .message-container:nth-child(2n+1) .message {
+    background-color: #ddedff;
+}
+
+#message-body .message-container:first-child .message {
+    background-color: #fdf6ed;
+    border: 1px solid #eee0ce;
+    padding: 24px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    color: #2b2b2b;
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+.status {    
+    border: 1px solid #eee0ce;
+    border-radius: 6px;
+    background-color: white;
+    color: #444444;
+    padding: 10px 12px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.name {
+    color: black;
+    font-weight: bold;    
+}
+
+.timestamp {
+    color: grey;
+    font-weight: normal;
+    display: block;
+}
+
+.image-cropper {
+    width: 36px;
+    height: 36px;
+    /*position: relative;*/
+    overflow: hidden;
+    border-radius: 50%;    
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+}
+
+.profile-pic {
+    display: inline;
+    margin: 0 auto;
+    /* margin-left: -25%; */ /* centers the image */
+    height: 100%;
+    width: auto;
+}
+
+.namebar {
+    /* height: 36px;*/
+    width: 100%;
+    line-height: 36px;    
+    margin-bottom: 8px;
+}
+
+.namebar .timestamp {
+    display: inline;
+}
+
+.message-group {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 16px;
+}
+
+#user-input {
+    border-top: 1px solid #f2f2f2;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#user-input .image-cropper {
+    vertical-align: middle;
+}
 
 /* MEDIA QUERIES */
 
@@ -122,7 +322,7 @@ body {
         display: none;
     }
 
-    .padding-lr {
+    .gutter-lr {
         padding: 0 8px;
     }
     
@@ -132,5 +332,24 @@ body {
     
     .right-side {
         right: 8px;
+    }
+    
+    .message-group {
+        width: 80%;
+    }
+    
+    #message-body .message-container:first-child {
+        border-bottom: 1px solid #eee0ce;
+        background-color: #fdf6ed;
+    }
+    
+    #message-body .message-container:first-child .message {
+        border: none;
+        background-color: none;
+        padding: 0;
+    }
+    
+    .icon-inline {
+        display: block;
     }
 }
