@@ -14,8 +14,10 @@ body {
 #header {
     background-color: #F9F9F9;
     height: 82px;
-    position: relative;  
+    position: relative;
+    z-index: 20;
     border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .site-width {
@@ -32,6 +34,18 @@ body {
     padding-right: 0;
     margin-left: 16px;
     margin-right: 16px;
+}
+
+#user-input-mobile {
+    position: sticky;
+    z-index: 10;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0 1px 10px 4px #f1f1f1;
+    background-color: white;
+    font-size: 18px;
+    color: #9c9c9c;
 }
 
 .left-side {
@@ -156,10 +170,21 @@ body {
     padding: 16px 16px 16px 40px;
     display: inline-block;
     font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle;
 }
 
-.icon-inline {
-    
+.icon-comment:hover {
+    text-decoration: underline;
+}
+
+#user-input-mobile .icon-comment {
+    padding-left: 28px;
+}
+
+#user-input-mobile input {
+    height: 60px;
+    border: none;
 }
 
 .icon-inline-work {
@@ -172,10 +197,6 @@ body {
 
 .icon-inline-flag {
     background: url('../icons/Flag-Thin.svg') no-repeat left 6px top 50%;
-}
-
-#message-body {
-    
 }
 
 .message {
