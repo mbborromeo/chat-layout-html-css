@@ -155,11 +155,6 @@ body {
     
 }
 
-.icon-inline div {
-    display: inline-block;
-    padding: 8px 12px 8px 30px;
-}
-
 .icon-inline-work {
     background: url('../icons/Work-Thin.svg') no-repeat left 6px top 50%;
 }
@@ -178,13 +173,17 @@ body {
 
 .message {
     margin-bottom: 4px;
-    padding: 10px;
+    padding: 12px 16px; 
     border-radius: 16px;
-    /* display: inline-block; */
+    display: inline-block;
 }
 
-.message div {
-    
+.message.icon-inline {
+    padding-left: 40px;
+}
+
+.message-wrapper {
+    display: block;    
 }
 
 .message a {
@@ -196,7 +195,7 @@ body {
     text-decoration: none;   
 }
 
-.message a.link-person { /* a[href^="http:"]  */
+.message a.link-person {
     text-decoration: none;
     background-color: #bfd7f5;
 }
